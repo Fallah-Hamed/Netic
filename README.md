@@ -65,16 +65,5 @@ Errors: `syntax`, `body_overlap`, `wire_through_body`, `no_heading`,
 
 Warnings: `wire_cross`, `face_tangent`, `body_spacing`, `symbol_on_pin`.
 
-## Out of scope (v0.3)
-
-- Integrated circuits / multi-pin boxes
-- Hierarchical sheets
-- Diagonals / non-orthogonal walks
-- Half-grid steps
-- Absolute coordinates
-- KiCad / Altium / EasyEDA export
-- Footprint / LCSC / PCB place-and-route
-- MCP server (the CLI/JSON contract is the API)
-
 Origin: analog pen-walk work in LLM2KiCAD (`drawlang`, 2026-08-29). Netic is
 the standalone language project. The frozen L2–L4 placer is not this repo.
