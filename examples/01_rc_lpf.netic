@@ -1,0 +1,5 @@
+# RC low-pass: series R, shunt C to ground
+label VIN
+r Res R1 1k r (vout)
+pulldown{2 Cap C1 100n}
+label VOUT

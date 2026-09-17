@@ -1,0 +1,5 @@
+# Wien RC network: series RC, then parallel shunt RC (no op-amp)
+label VIN
+r Res R1 10k r Cap C1 10n r (mid)
+bank{down, 2, 3, forward, Res R2 10k, Cap C2 10n}
+label VOUT

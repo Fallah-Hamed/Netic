@@ -1,0 +1,21 @@
+# Colpitts-style CE with collector tank (L up, C hang to the side)
+# Branches at stem centers; equal interconnects everywhere.
+label FB
+r (base)
+pulldown{2 Res Rb 22k}
+r r (qb) Q:B npn Q1 2N3904
+to C
+(tank)
+label OUT
+u u Ind L1 100n u PWR:VCC
+@tank
+move { u }
+r r r (c1hang)
+d d Cap C1 100p d d GND
+@tank
+move { u }
+r r r r r r (c2rail)
+d d Cap C2 100p d d GND
+@qb
+to E
+d d Res Re 220 d GND

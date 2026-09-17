@@ -1,0 +1,22 @@
+# Common-emitter amplifier — collector up, emitter down
+# Branches at stem centers; every passive has equal interconnects.
+label VIN
+r Cap Cin 100n r (base)
+pullup{2 Res Rb1 47k VCC}
+pulldown{2 Res Rb2 10k}
+r r (qb) Q:B npn Q1 2N3904
+to C
+(vc)
+u u Res Rc 1k u PWR:VCC
+@vc
+move { u }
+r r Cap Cout 100n r
+label VOUT
+@qb
+to E
+(ve)
+d d Res Re 100 d GND
+@ve
+move { d }
+r r r
+pulldown{1 Cap Ce 10u}

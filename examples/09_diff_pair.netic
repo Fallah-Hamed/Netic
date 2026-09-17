@@ -1,0 +1,27 @@
+# BJT long-tailed pair — Q1/Q2 emitters share Rt at the rail center,
+# symmetric inputs with equal interconnects.
+label INP
+r Cap Cp 100n r (b1)
+Q:B npn Q1 2N3904
+to C
+(c1)
+u Res Rc1 1k u PWR:VCC
+@c1
+label OUTP
+@b1
+to E
+(e1)
+d
+r r r (mid)
+pulldown{1 Res Rt 1k}
+r r r (e2)
+u
+move { r r r r r u }
+label INN
+l Cap Cn 100n l (b2)
+Q:B npn Q2 2N3904
+to C
+(c2)
+u Res Rc2 1k u PWR:VCC
+@c2
+label OUTN

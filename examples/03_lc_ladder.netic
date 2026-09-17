@@ -1,0 +1,7 @@
+# LC low-pass ladder: L series, C shunt, L series, C shunt
+label VIN
+r Ind L1 10n r (n1)
+pulldown{2 Cap C1 10p}
+r Ind L2 10n r (n2)
+pulldown{2 Cap C2 10p}
+label VOUT

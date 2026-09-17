@@ -1,0 +1,22 @@
+# Common-source NMOS amplifier — branches at stem centers,
+# every passive has equal interconnects.
+label VIN
+r Cap Cin 100n r (gate)
+pullup{2 Res Rg1 100k VDD}
+pulldown{2 Res Rg2 100k}
+r r (mg) M:G nmos M1
+to D
+(vd)
+u u Res Rd 1k u PWR:VDD
+@vd
+move { u }
+r r Cap Cout 100n r
+label VOUT
+@mg
+to S
+(vs)
+d d Res Rs 100 d GND
+@vs
+move { d }
+r r r
+pulldown{1 Cap Cs 10u}

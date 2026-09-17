@@ -1,0 +1,16 @@
+# Simple CS LNA: gate inductor, source degeneration L, drain L to VDD
+# Branches at stem centers; equal interconnects; symbols off pins.
+move { l } label RF_IN
+r Ind Lg 10n r (gate)
+pulldown{2 Res Rg 10k}
+r r (mg) M:G nmos M1
+to S
+d d Ind Ls 1n d GND
+@mg
+to D
+(vd)
+u u Ind Ld 10n u PWR:VDD
+@vd
+move { u }
+r r Cap Cout 1p r
+label RF_OUT

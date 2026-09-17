@@ -1,0 +1,5 @@
+# RC high-pass: series C, shunt R to ground
+label VIN
+r Cap C1 100n r (vout)
+pulldown{2 Res R1 10k}
+label VOUT

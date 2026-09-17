@@ -1,0 +1,20 @@
+[project]
+name = "netic"
+version = "0.3.0"
+description = "Netic — relative grid-space analog schematic DSL"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "UNLICENSED" }
+
+[project.optional-dependencies]
+png = ["playwright"]
+
+[project.scripts]
+netic = "netic.__main__:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["netic*"]
